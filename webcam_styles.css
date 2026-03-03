@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
       font-family: 'Open Sans', sans-serif;
 }
 
-p, b, i, a, li {
+p, b, i, a, li, button, img {
       font-family: 'Montserrat', sans-serif;
 }
 
@@ -63,15 +63,19 @@ p, b, i {
 
 button {
       margin: 0 1em;
-      border: black 2px solid;
+      border: 2px solid black;
       padding: 0.5em;
-      min-width: 100px;
+      min-width: fit-content;
       border-radius: 10px;
       background: none;
 }
 
 button:hover {
       transition: 0.1s;
+      background: lightgray;
+}
+
+button:active {
       background: lightgray;
 }
 
@@ -92,14 +96,27 @@ img {
 }
 
 /* Webcam Page */
-div {
-      height: 100vh;
+
+#webcamImage {
+      max-width: 640px;
+      max-height: 480px;
 }
 
 .caption {
-      align-items: center;
-      height: initial;
-      display: inline-flex;
+      max-width: 640px;
+      max-height: fit-content;
+      display: block;
+      margin: 1em auto;
+      font-size: small;
+}
+
+.caption button {
+      display: inline;
+      text-align: center;
+      width: 10em;
+}
+.caption p {
+      display: inline;
 }
 
 textarea {
