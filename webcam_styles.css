@@ -61,6 +61,20 @@ p, b, i {
       max-width: 600px;
 }
 
+button {
+      margin: 0 1em;
+      border: black 2px solid;
+      padding: 0.5em;
+      min-width: 100px;
+      border-radius: 10px;
+      background: none;
+}
+
+button:hover {
+      transition: 0.1s;
+      background: lightgray;
+}
+
 img {
       display: block;
       margin: 0.5em 1em;
@@ -80,6 +94,12 @@ img {
 /* Webcam Page */
 div {
       height: 100vh;
+}
+
+.caption {
+      align-items: center;
+      height: initial;
+      display: inline-flex;
 }
 
 textarea {
