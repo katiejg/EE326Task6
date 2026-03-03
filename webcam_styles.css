@@ -105,18 +105,20 @@ img {
 .caption {
       max-width: 640px;
       max-height: fit-content;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin: 1em auto;
       font-size: small;
 }
 
 .caption button {
-      display: inline;
       text-align: center;
       width: 10em;
 }
 .caption p {
-      display: inline;
+      text-align: right;
+      margin-right:0;
 }
 
 textarea {
