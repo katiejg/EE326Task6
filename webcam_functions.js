@@ -1,6 +1,6 @@
 var websocket = null;
 var localhost = "";
-var b = document.getElementsByClassName('caption').getElementById('btnWS');
+var b = document.getElementById('btnWS');
 var buttonClicked = false;
 
 // Initialize the websocket
