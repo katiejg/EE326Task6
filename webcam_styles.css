@@ -97,11 +97,6 @@ img {
 
 /* Webcam Page */
 
-#webcamImage {
-      max-width: 640px;
-      max-height: 480px;
-}
-
 .caption {
       max-width: 640px;
       max-height: fit-content;
