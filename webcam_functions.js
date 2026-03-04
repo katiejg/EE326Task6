@@ -1,6 +1,6 @@
 var websocket = null;
 var localhost = "";
-var b = document.getElementById('btnWS');
+var b = document.getElementsByClassName('caption').getElementById('btnWS');
 var buttonClicked = false;
 
 // Initialize the websocket
@@ -13,7 +13,7 @@ function init() {
 }
 
 function doConnect() { // makes a connection and defines callbacks
-	if (b.innerText == "Start Webcam") {
+	if (b.innerText == "Start/Stop") {
 		writeToScreen("Connecting to ws://" + localhost + ":81/ ...");
 		b.disabled = true;
 		websocket = new WebSocket("ws://" + localhost + ":81/");
