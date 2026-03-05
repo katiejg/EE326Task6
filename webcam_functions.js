@@ -40,10 +40,8 @@ function onOpen(evt) { // when handshake is complete:
 	writeToScreen("Connected.");
 	//*** Change the text of the button to read "Stop Webcam" ***//
 	b.innerText = "Stop Webcam";
-
 	//*** Change the title attribute of the button to display "Click to stop webcam" ***//
 	b.title = "Click to stop webcam";
-
 	//*** Enable the button ***//
 	b.disabled = false;
 
@@ -54,12 +52,10 @@ function onClose(evt) { // when socket is closed:
 	writeToScreen("Disconnected. Error: " + evt);
 	//*** Change the text of the button to read "Start Webcam" ***//
 	b.innerText = "Start Webcam";
-      
-    //*** Change the title attribute of the button to display "Click to start webcam" ***//
+	//*** Change the title attribute of the button to display "Click to start webcam" ***//
 	b.title = "Click to start webcam";
-        
-    //*** Enable the button ***//
-    b.disabled = false;
+	//*** Enable the button ***//
+	b.disabled = false;
     
     
     // If the user never actually clicked the button to stop the webcam, reconnect.
@@ -75,7 +71,7 @@ function onMessage(msg) {
 	let hours = now.getHours();
 	let minutes = now.getMinutes();
 	let seconds = now.getSeconds();
-	tstamp.innerText = `Timestamp ${hours}:${minutes}:${seconds:3.0i}`;
+	tstamp.innerText = `Timestamp ${hours}:${minutes}:${seconds}`;
 	
 	// Get the image just taken from WiFi chip's RAM.
 	var image = document.getElementById('image');
@@ -108,14 +104,13 @@ function onError(evt) { // when an error occurs
 function btnClick() {
 	b.disabled = true;
 	buttonClicked = true;
-
 	if (websocket.readyState === WebSocket.OPEN) {
-		doConnect();
-	} else {
 		websocket.close();
+	} else {
+		doConnect();
 	}
 }
-b.addEventListener("click", btnClick, false);
+b.addEventListener("click", btnClick);
 
 // Function to display to the message box
  function writeToScreen(message)
