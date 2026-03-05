@@ -7,7 +7,6 @@
 }
 body {
       height: 100vh;
-      overflow: hidden;
 }
 
 /* Navigation Bar */
@@ -75,4 +74,8 @@ img {
       margin-left: auto;
       margin-right: auto;
       padding: 1em;
+}
+
+#funFact {
+      font-size: 18pt;
 }
